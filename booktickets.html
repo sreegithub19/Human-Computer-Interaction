@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ticket Booking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body
+{
+background-color: lightblue;
+}
+h2
+{
+font-family: Lobster;
+}
+.btn-space
+{
+margin-right: 17px;
+}
+</style>
+<body>
+
+<div class="container">
+  <form>
+    <h2 class="text-center">Book Tickets</h2><br><br>
+    <div class="form-group well container" style="border: 4px solid orange">
+      <label for="sel1">Select From Location:</label>
+      <select class="form-control" id="sel1">
+        <option>Select</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Kochi</option>
+        <option>Hyderabad</option>
+      </select><br>
+      <label for="sel2">Select To Location:</label>
+      <select class="form-control" id="sel2">
+        <option>Select</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Kochi</option>
+        <option>Hyderabad</option>
+      </select><br>
+   
+      <label for="sel2">Select no of seats:</label><br>
+      <input type="number" name="Quantity"><br>
+     <br>
+   
+      <label>Enter travel date:</label><br>
+    <input type="date" name="bday"><br><br>
+     <div class="btn-group">
+<div class="pull-left btn-space">
+<a class="btn btn-success col-md-12" href="seatbooking.html">Continue</a>
+</div>
+<div class="pull-right">
+<a class="btn btn-danger col-md-12" href="afterloginhomepage.html">Cancel</a><br><br><br>
+</div>
+</div>
+</div>
+  </form>
+</div>
+</body>
+</html>

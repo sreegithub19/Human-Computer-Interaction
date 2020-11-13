@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body
+{
+background-color: lightblue;
+}
+h1
+{
+font-family: Lobster;
+}
+ol {
+  list-style :none;
+  padding: 0;
+  margin: 0;
+}
+.bus {
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.row {
+  
+}
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+.seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;  
+}
+
+.seat {
+  margin: 10px;
+  display: flex;
+  flex: 0 0 14%;
+  padding: 10px;
+  position: relative;  
+  &:nth-child(3) {
+    margin-right: 14.28571428571429%;
+  }
+  input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+  }
+  input[type=checkbox]:checked {
+    + label {
+      background: #bada55;      
+      -webkit-animation-name: rubberBand;
+          animation-name: rubberBand;
+      animation-duration: 300ms;
+      animation-fill-mode: both;
+    }
+  }
+  input[type=checkbox]:disabled {
+    + label {
+      background: #dddddd;
+      text-indent: -9999px;
+      overflow: hidden;
+      &:after {
+        content: "X";
+        text-indent: 0;
+        position: absolute;
+        top: 4px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+      &:hover {
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+  label {    
+    display: block;
+    position: relative;    
+    width: 100%;    
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5REM;
+    padding: 4px 0;
+    background: #F42536;
+    border-radius: 5px;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 75%;
+      top: 1px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      background: rgba(255,255,255,.4);
+      border-radius: 3px;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 0px 2px #5C6AFF;
+    }
+    
+  }
+  .fuselage {
+  border-right: 5px solid #d8d8d8;
+  border-left: 5px solid #d8d8d8;
+}
+
+}
+</style>
+<body>
+<div class="bus">
+  <div class="cockpit">
+    <h1>Please select a seat</h1>
+  </div>
+  <div class="exit exit--front fuselage">
+    
+  </div>
+  <ol class="cabin fuselage">
+    <li class="row row--1">
+      <ol class="seats" type="A">
+        <li class="seat">
+          <input type="checkbox" id="1A" />
+          <label for="1A">1A</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2A" />
+          <label for="2A">2A</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3A" />
+          <label for="3A">3A</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4A" />
+          <label for="4A">4A</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--2">
+      <ol class="seats" type="B">
+        <li class="seat">
+          <input type="checkbox" id="1B" />
+          <label for="1B">1B</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2B" />
+          <label for="2B">2B</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3B" />
+          <label for="3B">3B</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4B" />
+          <label for="4B">4B</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--3">
+      <ol class="seats" type="C">
+        <li class="seat">
+          <input type="checkbox" id="1C" />
+          <label for="1C">1C</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2C" />
+          <label for="2C">2C</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3C" />
+          <label for="3C">3C</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4D" />
+          <label for="4D">4D</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--4">
+      <ol class="seats" type="D">
+        <li class="seat">
+          <input type="checkbox" id="1D" />
+          <label for="1D">1D</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2D" />
+          <label for="2D">2D</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3D" />
+          <label for="3D">3D</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4D" />
+          <label for="4D">4D</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--5">
+      <ol class="seats" type="E">
+        <li class="seat">
+          <input type="checkbox" id="1E" />
+          <label for="1E">1E</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2E" />
+          <label for="2E">2E</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3E" />
+          <label for="3E">3E</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4E" />
+          <label for="4E">4E</label>
+        </li>
+        
+      </ol>
+    </li>
+     <li class="row row--6">
+      <ol class="seats" type="F">
+        <li class="seat">
+          <input type="checkbox" id="1F" />
+          <label for="1F">1F</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2F" />
+          <label for="2F">2F</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3F" />
+          <label for="3F">3F</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4F" />
+          <label for="4F">4F</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--7">
+      <ol class="seats" type="G">
+        <li class="seat">
+          <input type="checkbox" id="1G" />
+          <label for="1G">1G</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2G" />
+          <label for="2G">2G</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3G" />
+          <label for="3G">3G</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4G" />
+          <label for="4G">4G</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--8">
+      <ol class="seats" type="H">
+        <li class="seat">
+          <input type="checkbox" id="1H" />
+          <label for="1H">1H</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2H" />
+          <label for="2H">2H</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3H" />
+          <label for="3H">3H</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" disabled +id="4H" />
+          <label for="4H">4H</label>
+        </li>
+        
+        
+      </ol>
+    </li>
+</ol>
+<br>
+<div class="pull-left btn-space">
+<a class="btn btn-success col-md-12" href="afterbooking.html">Book</a>
+</div>
+<div class="pull-right">
+<a class="btn btn-danger col-md-12" href="booktickets.html">Cancel</a>
+</div>
+</div>
+
+</body>
+</html>
